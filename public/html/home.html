@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Greate Battle</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Greate Battle" charset="utf-8">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="icon" href="../resources/img/welcome/107-1072666_s-h-i-e-l-d-playground-shield.png">
+</head>
+
+<body>
+    <!-- <img id = "image" src = "../resources/img/welcome/107-1072666_s-h-i-e-l-d-playground-shield.png"> -->
+    <div id="content">
+        <div id="left_bar">
+            <div>
+                <img id="profile_image" src="../resources/img/users_avatars/default_pi.png">
+            </div>
+            <label id="username">Username</label>
+            <div>
+                <button id="play_button" onclick="open_play()">Play</button>
+                <button id="deck_button" onclick="open_deck()">Deck</button>
+                <button id="settings_button" onclick="open_settings()">Settings</button>
+                <button id="logout_button" onclick="open_dialog();">Log Out</button>
+
+            </div>
+        </div>
+        <div id="right_container">
+            <img id="bg_image" src="../resources/img/welcome/107-1072666_s-h-i-e-l-d-playground-shield.png">
+            <play id="play_window">
+                <!-- <label for="">play</label> -->
+                <a href="/play"><button class = 'mybtn' id="button_find_game">Find the game</button></a>
+            </play>
+            <deck id="deck_window">
+                <label id="deck_label">your Deck</label>
+                <div id="deck">
+                    <div class="deck_slot" id="deck_slot1" onclick="removeFromDeck(1)">
+                    </div>
+                    <div class="deck_slot" id="deck_slot2" onclick="removeFromDeck(2)">
+                    </div>
+                    <div class="deck_slot" id="deck_slot3" onclick="removeFromDeck(3)">
+                    </div>
+                    <div class="deck_slot" id="deck_slot4" onclick="removeFromDeck(4)">
+                    </div>
+                    <div class="deck_slot" id="deck_slot5" onclick="removeFromDeck(5)">
+                    </div>
+                    <div class="deck_slot" id="deck_slot6" onclick="removeFromDeck(6)">
+                    </div>
+                    <div class="deck_slot" id="deck_slot7" onclick="removeFromDeck(7)">
+                    </div>
+                    <div class="deck_slot" id="deck_slot8" onclick="removeFromDeck(8)">
+                    </div>
+                </div>
+                <div>
+                    <label id="deck_price_label">deck price:</label>
+                    <button id="deck_save_button">Save</button>
+                </div>
+
+                <div id="card_list">
+                    <label id="heroes_header">Heroes</label>
+                    <div id="heroes_list">
+                        <div class="card" id="list_card_1" onclick="addToDeck(1)">
+                            <img id="img_list_card_1" src="">
+                            <!-- ../resources/img/cards/png/heroes/black_panther.png -->
+                            <label id="price_list_card_1" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_1" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_1" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                        </div>
+                        <div class="card" id="list_card_2" onclick="addToDeck(2)">
+                            <img id="img_list_card_2" src="">
+                            <!-- ../resources/img/cards/png/heroes/captain_amerika.png -->
+                            <label id="price_list_card_2" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_2" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_2" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                        </div>
+
+                        <div class="card" id="list_card_3" onclick="addToDeck(3)">
+                            <img id="img_list_card_3" src="">
+                            <!-- ../resources/img/cards/png/heroes/cyclop.png -->
+                            <label id="price_list_card_3" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_3" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_3" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                        </div>
+                        <div class="card" id="list_card_4" onclick="addToDeck(4)">
+                            <img id="img_list_card_4" src="">
+                            <!-- ../resources/img/cards/png/heroes/dardevil.png -->
+                            <label id="price_list_card_4" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_4" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_4" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                        <div class="card" id="list_card_5" onclick="addToDeck(5)">
+                            <img id="img_list_card_5" src="">
+                            <!-- ../resources/img/cards/png/heroes/doctor_strange.png -->
+                            <label id="price_list_card_5" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_5" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_5" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                        <div class="card" id="list_card_6" onclick="addToDeck(6)">
+                            <img id="img_list_card_6" src="">
+                            <!-- ../resources/img/cards/png/heroes/hulk.png -->
+                            <label id="price_list_card_6" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_6" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_6" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                        <div class="card" id="list_card_7" onclick="addToDeck(7)">
+                            <img id="img_list_card_7" src="">
+                            <!-- ../resources/img/cards/png/heroes/iron_man.png -->
+                            <label id="price_list_card_7" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_7" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_7" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                        <div class="card" id="list_card_8" onclick="addToDeck(8)">
+                            <img id="img_list_card_8" src="">
+                            <!-- ../resources/img/cards/png/heroes/spider_man.png -->
+                            <label id="price_list_card_8" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_8" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_8" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                        <div class="card" id="list_card_9" onclick="addToDeck(9)">
+                            <img id="img_list_card_9" src="">
+                            <!-- ../resources/img/cards/png/heroes/thor.png -->
+                            <label id="price_list_card_9" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_9" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_9" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                        <div class="card" id="list_card_10" onclick="addToDeck(10)">
+                            <img id="img_list_card_10" src="">
+                            <!-- ../resources/img/cards/png/heroes/wolverine.png -->
+                            <label id="price_list_card_10" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_10" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_10" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                    </div>
+
+                    <label id="villians_header">Villians</label>
+                    <div id="villians_list">
+                        <div class="card" id="list_card_11" onclick="addToDeck(11)">
+                            <img id="img_list_card_11" src="">
+                            <!-- ../resources/img/cards/png/villians/doom.png -->
+                            <label id="price_list_card_11" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_11" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_11" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                        <div class="card" id="list_card_12" onclick="addToDeck(12)">
+                            <img id="img_list_card_12" src="">
+                            <!-- ../resources/img/cards/png/villians/electro.png -->
+                            <label id="price_list_card_12" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_12" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_12" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                        <div class="card" id="list_card_13" onclick="addToDeck(13)">
+                            <img id="img_list_card_13" src="">
+                            <!-- ../resources/img/cards/png/villians/galactus.png -->
+                            <label id="price_list_card_13" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_13" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_13" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                        <div class="card" id="list_card_14" onclick="addToDeck(14)">
+                            <img id="img_list_card_14" src="">
+                            <!-- ../resources/img/cards/png/villians/goblin.png -->
+                            <label id="price_list_card_14" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_14" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_14" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                        <div class="card" id="list_card_15" onclick="addToDeck(15)">
+                            <img id="img_list_card_15" src="">
+                            <!-- ../resources/img/cards/png/villians/kraven.png -->
+                            <label id="price_list_card_15" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_15" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_15" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                        <div class="card" id="list_card_16" onclick="addToDeck(16)">
+                            <img id="img_list_card_16" src="">
+                            <!-- ../resources/img/cards/png/villians/loki.png -->
+                            <label id="price_list_card_16" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_16" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_16" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                        <div class="card" id="list_card_17" onclick="addToDeck(17)">
+                            <img id="img_list_card_17" src="">
+                            <!-- ../resources/img/cards/png/villians/red_skull.png -->
+                            <label id="price_list_card_17" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_17" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_17" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                        <div class="card" id="list_card_18" onclick="addToDeck(18)">
+                            <img id="img_list_card_18" src="">
+                            <!-- ../resources/img/cards/png/villians/stervyatnik.png -->
+                            <label id="price_list_card_18" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_18" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_18" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                        <div class="card" id="list_card_19" onclick="addToDeck(19)">
+                            <img id="img_list_card_19" src="">
+                            <!-- ../resources/img/cards/png/villians/tanos.png -->
+                            <label id="price_list_card_19" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_19" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_19" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                        <div class="card" id="list_card_20" onclick="addToDeck(20)">
+                            <img id="img_list_card_20" src="">
+                            <!-- ../resources/img/cards/png/villians/venom.png -->
+                            <label id="price_list_card_20" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_20" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_20" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                    </div>
+
+                    <label id="stones_header">Stones</label>
+                    <div id="stones_list">
+                        <div class="card" id="list_card_21" onclick="addToDeck(21)">
+                            <img id="img_list_card_21" src="">
+                            <!-- ../resources/img/cards/png/stones/mind_stone.png -->
+                            <label id="price_list_card_21" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_21" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_21" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                        <div class="card" id="list_card_22" onclick="addToDeck(22)">
+                            <img id="img_list_card_22" src="">
+                            <!-- ../resources/img/cards/png/stones/power_stone.png -->
+                            <label id="price_list_card_22" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_22" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_22" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                        <div class="card" id="list_card_23" onclick="addToDeck(23)">
+                            <img id="img_list_card_23" src="">
+                            <!-- ../resources/img/cards/png/stones/reality_stone.png -->
+                            <label id="price_list_card_23" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_23" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_23" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                        <div class="card" id="list_card_24" onclick="addToDeck(24)">
+                            <img id="img_list_card_24" src="">
+                            <!-- ../resources/img/cards/png/stones/soul_stone.png -->
+                            <label id="price_list_card_24" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_24" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_24" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                        <div class="card" id="list_card_25" onclick="addToDeck(25)">
+                            <img id="img_list_card_25" src="">
+                            <!-- ../resources/img/cards/png/stones/space_stone.png -->
+                            <label id="price_list_card_25" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_25" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_25" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+
+                        </div>
+                        <div class="card" id="list_card_26" onclick="addToDeck(26)">
+                            <img id="img_list_card_26" src="">
+                            <!-- ../resources/img/cards/png/stones/time_stone.png -->
+                            <label id="price_list_card_26" style="display:block;color:white; font-size:20px; position:absolute; bottom:180px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="hp_list_card_26" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:143.5px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                            <label id="damage_list_card_26" style="display:block;color:white; font-size:20px; position:absolute; bottom:5px; left:30px; z-index: 200; display: block; font-family: 'Bebas Neue', cursive;"></label>
+                        </div>
+                    </div>
+                </div>
+                <label id="deck_error_message" style=" display: none; color:white; font-size:40px; position:absolute; bottom:0px; left:30vw; z-index: 200; font-family: 'Bebas Neue', cursive;">fill all slots</label>
+            </deck>
+            <settings id="settings_window">
+                <label id="settings_header">Settings</label>
+                <label id="settings_username">Username</label>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <img id="settings_profile_image" src="../resources/img/users_avatars/default_pi.png">
+                    <label class="custom-file-upload">
+                                    <input id="uploadImage" name="upload_Image" type="file" onchange="PreviewImage();" accept="image/png, image/jpg, image/jpeg" />
+                                    Upload Photo
+                                </label>
+                    <input class="confirm_button" type="submit" value="Confirm" />
+                </form>
+            </settings>
+        </div>
+    </div>
+    <dialog_window id="dialog_window">
+        <div id="dialog_box">
+            <label id="dialog_question">Are you sure?</label>
+            <div>
+                <button type="submit">Yes</button>
+                <button type="dismit">No</button>
+            </div>
+        </div>
+
+    </dialog_window>
+    <audio src="../resources/audio/Avengers.mp3" autoplay loop>
+                Your browser does not support the
+                <code>audio</code> element.
+    </audio>
+    <audio id="myaudio"><source src="../resources/audio/button.mp3"></audio>
+    <script src="../js/sound_button_click.js"></script>
+</body>
+<script src="../js/home.js"></script>
+
+</html>

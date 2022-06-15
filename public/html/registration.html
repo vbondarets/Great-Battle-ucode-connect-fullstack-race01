@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registration</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Race01. Greate Battle" charset="utf-8">
+    <link rel="stylesheet" href="../css/registration.css">
+    <link rel="icon" href="../resources/img/welcome/107-1072666_s-h-i-e-l-d-playground-shield.png">
+</head>
+
+<body>
+    <div>
+        <a href="/">
+            <span id="back">←</span>
+        </a>
+    </div>
+    <div action="/registration">
+        <img id="shield_logo" src="../resources/img/welcome/107-1072666_s-h-i-e-l-d-playground-shield.png">
+        <div id="data" method="post" name="form">
+            <label id="username_label">Username</label>
+            <br><input id="login" type="login" minlength="4" maxlength="20">
+            <br><label id="email_label">Email</label>
+            <br><input id="email" type="email" minlength="4" maxlength="36">
+            <br><label id="password_label">password</label>
+            <br><input id="password" type="password" minlength="8" maxlength="24">
+            <img src="https://inspectionsystems.com.au/wp-content/uploads/2018/10/vision-icon-500-white.png" class="vision_icon" onclick="vision1()">
+            <br><label id="conf_password_label">confirm password</label>
+            <br><input id="password_confirm" type="password" minlength="8" maxlength="24">
+            <img src="https://inspectionsystems.com.au/wp-content/uploads/2018/10/vision-icon-500-white.png" class="vision_icon" onclick="vision2()">
+            <br><label id="error_label"></label>
+            <br><button id="button" type="submit">Confirm</button>
+        </div>
+    </div>
+    <audio id="myaudio"><source src="../resources/audio/button.mp3"></audio>
+    <script src="../js/sound_button_click.js"></script>
+    <script src="../js/registration.js"></script>
+</body>
+
+</html>

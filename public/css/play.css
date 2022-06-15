@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inconsolata:wght@700&display=swap');
+
+body{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+	margin: 0;
+    /* background-image: url(../resources/img/table/gb_table.png); */
+    background-color: black;
+	font-family: sans-serif;
+}
+#background{
+    position: absolute;
+    z-index: -1;
+}
+#background_img{
+	width: 100vw;
+}
+
+#skip {
+	position: absolute;
+	border-radius: 100%;
+    width: 7.5vw;
+    height: 7.5vw;
+    top: 24.375vw;
+    left: 82.563vw;
+}
+
+#skip:hover {
+	box-shadow: 0px 0px 8px #e245c0;
+}
+
+#mymana {
+	position: absolute;
+    border-radius: 0.4vw;
+    width: 0vw;
+    height: 2.68vw;
+    top: 47.5vw;
+    left: 66.7vw;
+    background-color: rgb(77, 193, 231);
+}
+
+#oponentmana {
+	position: absolute;
+    border-radius: 0.4vw;
+    width: 0vw;
+    height: 2.68vw;
+    top: 6vw;
+    left: 11.5vw;
+    background-color: rgb(255, 71, 71);
+}
+
+#myname {
+	position: absolute;
+	text-align: center;
+	content: "123";
+    width: 22.28vw;
+    height: 2.68vw;
+    top: 6vw;
+    left: 11.5vw;
+    background-color: rgb(77, 193, 231);
+}
+
+
+.card {
+	width: 6.5vw;
+    position: absolute;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    z-index: 6;
+}
+
+.OponentCard:hover {
+	box-shadow: 0px 0px 8px #0066ff;
+}
+
+.FloatingNum {
+	position: absolute;
+	font-size: 3.2vw;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+	font-weight: bold;
+	z-index: 24;
+}
+
+#overlay {
+	position: absolute;
+	display: flex;
+	text-align: center;
+    align-items:center;
+    justify-content:center;
+	width: 100%;
+	height: 100%;
+	z-index: 38;
+	font-size: 5vw;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+#mynik{
+    position: absolute;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    margin-left: 13vw;
+    margin-top: 46.8vw;
+    font-size: 4.5vw;
+}
+#opnik{
+    position: absolute;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    margin-left: 74vw;
+    margin-top: 4.5vw;
+    font-size: 4.5vw;
+}
+#myavatar{
+     position: absolute;
+    width: 13.5vw;
+	max-height: 13.5vw;
+    border-radius: 17px;
+	top: 50vw;
+	left:57.5vw;
+    zoom:78%
+	
+}
+#opavatar{
+    position: absolute;
+    width: 13.5vw;
+	max-height: 13.5vw;
+    border-radius: 17px;
+	top: 9vw;
+	left:57.5vw;
+    zoom:78%
+}
+#skip_timer{
+    position: absolute;
+    font-size: 4.5vw;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    top:25.5vw;
+	left: 14vw;
+}
+.statPrice{
+    position: relative;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.3vw;
+    color: white;
+    /* left: 0.5vw; */
+    z-index: 8;
+}
+.statDamage{
+    position: relative;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.3vw;
+    color: white;
+    top: 8vw;
+    /* left: 0.1vw; */
+    z-index: 8;
+}
+.statHP{
+    position: relative;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.3vw;
+    color: white;
+    top: 8vw;
+    /* left: 4.83vw; */
+    z-index: 8;
+}

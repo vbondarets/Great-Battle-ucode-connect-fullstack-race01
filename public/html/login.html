@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registration</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Greate Battle" charset="utf-8">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="icon" href="../resources/img/welcome/107-1072666_s-h-i-e-l-d-playground-shield.png">
+</head>
+
+<body>
+    <div>
+        <a href="/">
+            <span id="back">←</span>
+        </a>
+    </div>
+    <div>
+        <img id="shield_logo" src="../resources/img/welcome/107-1072666_s-h-i-e-l-d-playground-shield.png">
+        <div id="data">
+            <label id="username_label">Username</label>
+            <br><input id="login" type="text" minlength="4" maxlength="20">
+            <br><label id="password_label">password</label>
+            <br><input id="password" type="password" minlength="8" maxlength="24">
+            <img src="https://inspectionsystems.com.au/wp-content/uploads/2018/10/vision-icon-500-white.png" class="vision_icon" onclick="vision()">
+            <br><a id="new_here" href="/registration">New here?</a>
+            <a type="reminder" id="forgot_password" href="/reminder">Forgot password?</a>
+            <br><label id="error_label">aboba</label>
+            <br><button id="button" type="submit">Lets Go</button>
+        </div>
+    </div>
+    <audio id="myaudio"><source src="../resources/audio/button.mp3"></audio>
+    <script src="../js/sound_button_click.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+
+</html>

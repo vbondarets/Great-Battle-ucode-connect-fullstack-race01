@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>About</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Greate Battle" charset="utf-8">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="icon" href="../resources/img/welcome/107-1072666_s-h-i-e-l-d-playground-shield.png">
+</head>
+
+<body>
+    <content id="content">
+        <header>
+            <a href="/">
+                <img id="shield_logo" src="../resources/img/welcome/107-1072666_s-h-i-e-l-d-playground-shield.png" alt="shield_logo">
+            </a>
+            <a href="/registration" style="margin-left: 80vw;margin-top: 3vh;height: 35px;">
+                <button id="sign_up">Sign up</button>
+            </a>
+            <a href="/login" style="height: 35px;margin-top: 3vh;">
+                <button id="log_in">Log in</button>
+            </a>
+        </header>
+        <nav style="z-index: 1000;">
+            <button class="button_nav" id="play" onclick="to_home()">PLAY</button>
+            <a href="/news"><button class = "button_nav" id = "news" onclick = "">NEWS</button></a>
+            <button class="button_nav" id="gallery">GALLERY</button>
+            <a href="/rules"><button class="button_nav" id="rules">RULES</button></a>
+            <button class="button_nav" id="about">ABOUT</button>
+            <a href="/our_team"><button class="button_nav" id="our_team">OUR TEAM</button></a>
+        </nav>
+        <h1 id="name">About</h1>
+        <div>
+            <h2 id="text_holder">
+
+                <br> Great Battle is a project whose task is to show both team and individual knowledge and capabilities of 
+                <br>each of its participants.  Our goal was not just to complete the task assigned to us, but to implement a 
+                <br>full-fledged web application using relevant frameworks and a modern solution to certain problems.  
+                <br>Our application used: the Express framework, the JWT standard, bcrypt functions, mysql database,<br>
+                websocket and so on. 
+                <div id="images1">
+                    <img id="express_img" src= "../resources/img/about/express-routing-logo.png">
+                    <img id="jwt_img" src= "../resources/img/about/JSON-Web-Token-Authentication-With-Node.png">
+                    <img id="bcrypt_img" src= "../resources/img/about/default_2be036aaca5c71baf790e00f1ef80dd37a625905.png">
+                    <img id="mysql_img" src= "../resources/img/about/Mysql.png">
+                    <img id="websocket_img" src="../resources/img/about/websocket.png">
+                </div>
+                <br>The backend of the project is written using the node js platform, and the frontend is written using js and a standard markup
+                <br>language and styles.<br>
+                <div id="images2">
+                    <img id="node_img" src="../resources/img/about/node-js-icon-29.png">
+                    <img id="js_img" src="../resources/img/about/kisspng-javascript-html-computer-software-web-browser-watermark-5acdbd54ac19f7.4484983215234327887049.png">
+                    <img id="html_img" src="../resources/img/about/1200px-HTML5_logo_and_wordmark.svg.png">
+                    <img id="css_img" src="../resources/img/about/CSS3_logo_and_wordmark.svg.png">
+
+                </div>
+                <br>Disclaimer: This project was implemented for educational purposes and does not pretend to be commercialized.
+
+            </h2>
+
+        </div>
+
+        <info id="down_bar">
+            <a href="https://ucode.world/it-world/">
+                <img id="ucode_logo" src="../resources/img/welcome/ucode_logo.png" alt="ucode_logo">
+            </a>
+            <div id="social_media">
+                <a href="https://www.instagram.com/ucode_world/">
+                    <img id="in_logo" src="../resources/img/welcome/in_logo.png" alt="in_logo">
+                </a>
+                <a href="https://t.me/ucode_world">
+                    <img id="tg_logo" src="../resources/img/welcome/tg_logo.ico" alt="tg_logo">
+                </a>
+            </div>
+        </info>
+    </content>
+    <bg>
+        <div class="hero-video-holder">
+            <video src="../resources/video/videoplayback.webm" autoplay="autoplay" type="video/mp4" muted="muted" playsinline="playsinline" loop="loop" class="is-vh" style="width: 100vw; z-index: -1; position: fixed; opacity: 0.5; top: 0;"></video>
+        </div>
+    </bg>
+    <audio id="myaudio"><source src="../resources/audio/button.mp3"></audio>
+    <script src="../js/sound_button_click.js"></script>
+
+    <script src="../js/news.js"></script>
+</body>
+
+</html>

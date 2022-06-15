@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Great Battle</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Race01. Greate Battle" charset="utf-8">
+    <link rel="stylesheet" href="../css/welcome.css">
+    <link rel="icon" href="../resources/img/welcome/107-1072666_s-h-i-e-l-d-playground-shield.png">
+</head>
+
+<body>
+    <content id="content">
+
+        <header>
+            <a href="/">
+                <img id="shield_logo" src="../resources/img/welcome/107-1072666_s-h-i-e-l-d-playground-shield.png" alt="shield_logo">
+            </a>
+            <a href="/registration" style="margin-left: 80vw;margin-top: 3vh;height: 35px;">
+                <button id="sign_up">Sign up</button>
+            </a>
+            <a href="/login" style="height: 35px;margin-top: 3vh;">
+                <button id="log_in">Log in</button>
+            </a>
+
+        </header>
+
+        <nav style="z-index: 1000;">
+
+            <a href="/home"><button class = "button_nav" id = "play" onclick = "">PLAY</button></a>
+            <a href="/news"><button class = "button_nav" id = "news" onclick = "">NEWS</button></a>
+            <button class="button_nav" id="gallery">GALLERY</button>
+            <a href="/rules"><button class="button_nav" id="rules">RULES</button></a>
+            <a href="/about"><button class = "button_nav" id = "about">ABOUT</button></a>
+            <a href="/our_team"><button class="button_nav" id="our_team">OUR TEAM</button></a>
+        </nav>
+
+        <introdusion>
+            <h1 id="name">Great Battle</h1>
+            <h2 id="description_of_the_game">
+                Use fullscreen mode in full HD quality for better experience<br><br> Welcome to an exciting card game with your favorite characters.
+                <br>Build your own unique deck. Compete with your friends. Pump your mind. <br>Compete in competitive mode and climb the rankings.
+            </h2>
+        </introdusion>
+
+        <photos id="photos">
+            <div class="row" id="row">
+                <div class="column">
+                    <img src="../resources/img/welcome/hs1.webp" alt="photo1" style="width: 380px; height: 214px;" onclick="Choose(src);">
+                </div>
+                <div class="column">
+                    <img src="../resources/img/welcome/hs2.png" alt="photo2" style="width: 380px; height: 214px;" onclick="Choose(src);">
+                </div>
+                <div class="column">
+                    <img src="../resources/img/welcome/hs3.png" alt="photo3" style="width: 380px; height: 214px;" onclick="Choose(src);">
+                </div>
+                <div class="column">
+                    <img src="../resources/img/welcome/hs2.jpg" alt="photo4" style="width: 380px; height: 214px;" onclick="Choose(src);">
+                </div>
+                <div class="column">
+                    <img src="../resources/img/welcome/hs3.jpg" alt="photo5" style="width: 380px; height: 214px;" onclick="Choose(src);">
+                </div>
+
+            </div>
+            <div class="container" style="width: 80vw;">
+                <span onclick="Close()" id="closebtn">&times;</span>
+                <img id="expandedImg" src="" style="display: none">
+            </div>
+        </photos>
+
+        <version>
+            <h1 id="version">Version 0.2.0</h1>
+            <h2 id="description_of_the_version">
+                - Fixed bugs.
+                <br>- Updated home page.
+                <br>- Added user's information personalization.
+                <br>- Updated welcome page.
+                <br>- Added gaming cards.
+                <br>- Added cards stats.
+                <br>- Added deck's slots system.
+                <br>- Updated and fixed server.
+                <br>- Updated and Data Base.
+                <br>- Learned the real pain from JS.
+            </h2>
+        </version>
+        <info id="down_bar">
+            <a href="https://ucode.world/it-world/">
+                <img id="ucode_logo" src="../resources/img/welcome/ucode_logo.png" alt="ucode_logo">
+            </a>
+            <div id="social_media">
+                <a href="https://www.instagram.com/ucode_world/">
+                    <img id="in_logo" src="../resources/img/welcome/in_logo.png" alt="in_logo">
+                </a>
+                <a href="https://t.me/ucode_world">
+                    <img id="tg_logo" src="../resources/img/welcome/tg_logo.ico" alt="tg_logo">
+                </a>
+            </div>
+
+
+
+        </info>
+
+    </content>
+
+    <bg>
+        <div class="hero-video-holder">
+            <video src="../resources/video/videoplayback.webm" autoplay="autoplay" type="video/mp4" muted="muted" playsinline="playsinline" loop="loop" class="is-vh" style="width: 100vw; z-index: -1; position: fixed; opacity: 0.5; top: 0;"></video>
+        </div>
+    </bg>
+
+    <audio id="myaudio"><source src="../resources/audio/button.mp3"></audio>
+    <script src="../js/sound_button_click.js"></script>
+
+    <script src="../js/welcome.js"></script>
+</body>
+
+</html>

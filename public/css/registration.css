@@ -1,0 +1,95 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inconsolata:wght@700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inconsolata:wght@700&family=Oswald:wght@500&display=swap');
+
+body{
+    background-color: rgb(23, 22, 31);
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+#data{
+    margin-top: 40px;
+    margin-left: 37%;
+}
+#back{
+    color: white;
+    font-size: 50px;
+    text-decoration: none;
+    margin-left: 0.5em;
+}
+#shield_logo{
+    height: 70px;
+    width: 70px;
+    margin-left: 46.6%;
+    /* margin-right: auto; */
+}
+#error_label{
+    margin-top: 1%;
+    display: none;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke-width: 0.8px;
+    -webkit-text-stroke-color: red;
+    font-size: 30px;
+    font-family: 'Bebas Neue', cursive;
+    /* margin-left: auto;*/
+    margin-right: 62%; 
+    padding: 0px;
+}
+label{
+    color: white;
+    font-size: 40px;
+    font-family: 'Bebas Neue', cursive;
+}
+#username_label{
+    margin-left: 120px;
+}
+#email_label{
+    margin-left: 144px;
+}
+#password_label{
+    margin-left: 120px;
+}
+#conf_password_label{
+    margin-left: 65px;
+}
+input{
+    text-align: center;
+    /* font-family: 'Bebas Neue', cursive; */
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    width: 18em;
+    height: 2em;
+    color:white;
+    background-color: rgb(34, 34, 43);
+    border-radius: 5px;
+    border: 2px solid;
+    border-color: rgb(255, 255, 255);
+}
+.vision_icon{
+    /* color: white; */
+    cursor: pointer;
+    zoom: 7%;
+    margin: 0;
+    padding: 0;
+    margin-left: -40vw;
+    margin-top: 6vh;
+    position: absolute;
+}
+#button{
+    background-color: rgba(63, 40, 167, 0.9);
+    height: 40px;
+    width: 240px;
+    margin-top: 0px;
+    margin-left: 8vh;
+    border: 0px solid;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+    cursor: pointer;
+}
+#button:hover{
+    background-color: rgba(83, 49, 235, 0.9);
+}

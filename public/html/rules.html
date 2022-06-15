@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rules</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Greate Battle" charset="utf-8">
+    <link rel="stylesheet" href="../css/rules.css">
+    <link rel="icon" href="../resources/img/welcome/107-1072666_s-h-i-e-l-d-playground-shield.png">
+</head>
+
+<body>
+    <content id="content">
+        <header>
+            <a href="/">
+                <img id="shield_logo" src="../resources/img/welcome/107-1072666_s-h-i-e-l-d-playground-shield.png" alt="shield_logo">
+            </a>
+            <a href="/registration" style="margin-left: 80vw;margin-top: 3vh;height: 35px;">
+                <button id="sign_up">Sign up</button>
+            </a>
+            <a href="/login" style="height: 35px;margin-top: 3vh;">
+                <button id="log_in">Log in</button>
+            </a>
+        </header>
+        <nav style="z-index: 1000;">
+            <button class="button_nav" id="play" onclick="to_home()">PLAY</button>
+            <a href="/news"><button class = "button_nav" id = "news" onclick = "">NEWS</button></a>
+            <button class="button_nav" id="gallery">GALLERY</button>
+            <button class="button_nav" id="rules">RULES</button>
+            <a href="/about"><button class="button_nav" id="about">ABOUT</button></a>
+            <a href="/our_team"><button class="button_nav" id="our_team">OUR TEAM</button></a>
+        </nav>
+        <h1 id="name">Rules</h1>
+        <div>
+            <h1 id="discription">Great Battle is a free web card game based on the Marvel Universe.</h1><br>
+            <h2 id="text_holder">
+                Before starting the game, you need to build your own deck of eight cards. Each card can be of two types, a spell and a creature.<br>
+                <!-- <img id="deck_img" src=""> -->
+                <video id="deck_video"src="../resources/video/deck_creating.mp4" autoplay="autoplay" type="video/mp4" muted="muted" playsinline="playsinline" loop="loop" style="width: 50vw;"></video><br>
+                <br>A spell is a card that has an energy cost and a special effect.<br>
+                <img id="stone_img" src="../resources/img/rules/stone.png"><br>
+                <br>A creature is a card that has a cost, health, and attack power.<br>
+                <img id="hero_img" src="../resources/img/rules/hero.png"><br>
+
+                <br>The goal of the game is to neutralize all the opponent's creatures or kill the hero.<br>
+
+                With each turn, the amount of available energy will increase by one, which will allow you to play stronger cards.<br>
+                During the course, you can play cards from your hand for energy, the creature that was put on the field cannot <br>
+                immediately attack, but can only at the beginning of your next turn. <br>
+                <video id="adding_video"src="../resources/video/adding.mp4" autoplay="autoplay" type="video/mp4" muted="muted" playsinline="playsinline" loop="loop" style="width: 40vw;"></video><br><br>
+
+                At the start of each of your turns, you will<br>
+                draw a random card from the draw pile represented by your deck.<br>
+                <video id="pulling_video"src="../resources/video/pulling.mp4" autoplay="autoplay" type="video/mp4" muted="muted" playsinline="playsinline" loop="loop" style="width: 40vw;"></video><br><br>
+
+                On your turn, you can attack enemy creatures. Or you can attack the hero in this case, <br>
+                there will be no attack on your creature.<br>
+                <video id="kill_video"src="../resources/video/kill.mp4" autoplay="autoplay" type="video/mp4" muted="muted" playsinline="playsinline" loop="loop" style="width: 40vw;"></video><br><br>
+
+ 
+                <br>No more than 30 seconds are given per move. If you do not complete the move after <br>
+                this time, the move will automatically pass to the enemy.<br>
+                <video id="timer_video"src="../resources/video/timer.mp4" autoplay="autoplay" type="video/mp4" muted="muted" playsinline="playsinline" loop="loop" style="width: 20vw;"></video><br><br>
+
+
+                <br>Good luck and may the smartest win. <br>
+                
+            </h2>
+
+        </div>
+
+        <info id="down_bar">
+            <a href="https://ucode.world/it-world/">
+                <img id="ucode_logo" src="../resources/img/welcome/ucode_logo.png" alt="ucode_logo">
+            </a>
+            <div id="social_media">
+                <a href="https://www.instagram.com/ucode_world/">
+                    <img id="in_logo" src="../resources/img/welcome/in_logo.png" alt="in_logo">
+                </a>
+                <a href="https://t.me/ucode_world">
+                    <img id="tg_logo" src="../resources/img/welcome/tg_logo.ico" alt="tg_logo">
+                </a>
+            </div>
+        </info>
+    </content>
+    <bg>
+        <div class="hero-video-holder">
+            <video src="../resources/video/videoplayback.webm" autoplay="autoplay" type="video/mp4" muted="muted" playsinline="playsinline" loop="loop" class="is-vh" style="width: 100vw; z-index: -1; position: fixed; opacity: 0.5; top: 0;"></video>
+        </div>
+    </bg>
+    <audio id="myaudio"><source src="../resources/audio/button.mp3"></audio>
+    <script src="../js/sound_button_click.js"></script>
+
+    <script src="../js/news.js"></script>
+</body>
+
+</html>
