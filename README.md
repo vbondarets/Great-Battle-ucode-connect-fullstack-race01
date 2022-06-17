@@ -9,7 +9,7 @@
 
 You can get acquainted with the project by the link https://great-battle.herokuapp.com/ <br/>
 or run it personally<br/><br/>
-To run the project, **install the repository:** *git clone https://github.com/vbondarets/Great-Battle.git*<br/>
+To run the project, **install the repository:** *git clone https://github.com/vbondarets/Great-Battle-ucode-connect-fullstack-race01.git*<br/>
 **Go to directory:** *cd Great-Battle*<br/>
 **Install pakages:** *npm install*<br/>
 **Download MySQL**<br/>
