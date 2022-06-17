@@ -1,7 +1,7 @@
 # Great-Battle
-s a Hearthstone-style card game inspired by Marvel. 
-A project built using node js, express, websocket, jwt, etc. 
-You can get acquainted with the project by the link https://great-battle.herokuapp.com/
+it's a Hearthstone-style card game inspired by Marvel. /n
+A project built using node js, express, websocket, jwt, etc. /n
+You can get acquainted with the project by the link https://great-battle.herokuapp.com//n
 Or run it personally
 To run the project, install the repository: git clone https://github.com/vbondarets/Great-Battle.git
 Go to directory: cd Great-Battle
